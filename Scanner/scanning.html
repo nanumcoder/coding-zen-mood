@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Scanner</title>
+</head>
+
+<body>
+    <div class="scanner">
+        <h1>scanning...</h1>
+    </div>
+</body>
+<style>
+    .scanner h1 {
+        position: absolute;
+        font-size: 4vw;
+        color: grey;
+    }
+
+    .scanner h1::before {
+        content: "scanning...";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        border-right: 4px solid red;
+        box-shadow: 0px 0px 10px 10px #ff200f;
+        overflow: hidden;
+        color: grey;
+        animation: scan 10s linear infinite;
+    }
+
+    @keyframes scan {
+
+        0%,
+        10%,
+        100% {
+            width: 0;
+        }
+
+        60%,
+        100% {
+            width: 100%;
+            color: rgb(255, 0, 0);
+        }
+
+        0%,
+        10%,
+        100% {
+            width: 0%;
+        }
+    }
+</style>
+
+</html>
