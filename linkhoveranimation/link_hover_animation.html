@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Hover Animation</title>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <a href="https://enquiry.nanumcoder.com/" class="link">Nanum Coder</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/channel/UCpZrY727mO7PIeC8Z9MNiNg" class="link">Nanum Coder Youtube Channel</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/channel/UCpZrY727mO7PIeC8Z9MNiNg" class="link">Subscribe to nanum Coder</a>
+        </li>
+    </ul>
+</body>
+<style>
+    body{
+        background-color: gray;
+    }
+    .list{
+        list-style: none;
+        text-align: center;
+    }
+    .link{
+        display: inline-block;
+        margin-block: 2px;
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+    }
+    .link::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .25s ease;
+    }
+    .link:hover::after{
+        transform: scaleX(1);
+    }
+</style>
+</html>

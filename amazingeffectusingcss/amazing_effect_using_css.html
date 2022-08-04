@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing effect using css</title>
+</head>
+<body>
+    <div class="content">
+        <div class="top-left"></div>
+        <div class="left-bot"></div>
+        <div class="bot-right"></div>
+        <div class="right-top"></div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+        /* background: radial-gradient(circle at 50% 50%, #222,#111, #080808); */
+    }
+    .content{
+        width: 80vmin;
+        height: 80vmin;
+        position: relative;
+        animation: spin 5s linear 0s infinite;
+    }
+    @keyframes spin {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .top-left{
+        left: 11vmin;
+        top: 2vmin;
+    }
+    .top-bot{
+        bottom: 11vmin;
+        left: 2vmin;
+        transform: rotate(-90deg);
+    }
+    .bot-right{
+        right: 11vmin;
+        bottom: 2vmin;
+        transform: rotate(-180deg);
+    }
+    .right-top{
+        right: 2vmin;
+        top: 11vmin;
+        transform: rotate(-270deg);
+    }
+
+</style>
+</html>

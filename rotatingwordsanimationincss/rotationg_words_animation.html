@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Words Animation</title>
+</head>
+<body>
+    <h1 class="title">
+        I am NanumCoder, a <br>
+        professional
+        <div class="rotate-words">
+            <span style="--d: 0s">Laravel Tutorials</span>
+            <span style="--d: 4s">FullStack WebDevelopment</span>
+            <span style="--d: 8s">In Tamil Tutorials</span>
+        </div>
+    </h1>
+</body>
+
+<style>
+    .title{
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .rotate-words{
+        display: inline;
+        margin-left: 10px;
+    }
+    .rotate-words span{
+        width: max-content;
+        position: absolute;
+        background-color: #bb93fc;
+        padding-inline: 10px;
+        opacity: 0;
+        transform-origin: 10% 75%;
+        animation: rotateWords 12s var(--d)linear infinite;
+    }
+    @keyframes rotateWords{
+        5%{
+            opacity: 1;
+        }
+        10%,
+        20%{
+            opacity: 1;
+            transform: rotate(30deg);
+        }
+        15%{
+            transform: rotate(-1deg);
+
+        }
+        25%{
+            opacity: 0;
+            transform: translateY(90px)
+            rotate(10deg);
+        }
+    }
+</style>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weird Loader</title>
+</head>
+<body>
+    <svg>
+        <circle cx="57" cy="57" r="52" class="circle"></circle>
+        <circle cx="57" cy="57" r="52" class="loader"></circle>
+    </svg>
+</body>
+<style>
+    body{
+        background-color: gray;
+        align-items: center;
+    }
+    svg{
+        width: 114px;
+        height: 114px;
+    }
+    .circle{
+        fill: none;
+        stroke-width: 10px;
+        stroke: rgb(19, 18, 18);
+    }
+    .loader{
+        fill: none;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        stroke-dasharray: 360;
+        stroke-dashoffset: 100;
+        stroke: rgb(5, 255,193);
+        animation: load 1s infinite;
+    }
+    @keyframes load {
+        0%{
+            stroke-dasharray: 360;
+        }
+        50%{
+            stroke-dasharray: 1;
+        }
+        100%{
+            stroke-dasharray: 360;
+        }
+    }
+</style>
+</html>

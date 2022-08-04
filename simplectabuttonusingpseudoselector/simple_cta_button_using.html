@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA button</title>
+</head>
+<body>
+    <button class="btn">Hover Me</button>
+</body>
+<style>
+    body{
+        background-color: gray;
+    }
+    .btn{
+        position: relative;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        background: transparent;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .btn::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 30%;
+        background: deepskyblue;
+        border-radius: 10px;
+        z-index: -1;
+        transition: 0.3s ease;
+    }
+    .btn:hover::after{
+        width: 100%;
+    }
+</style>
+</html>

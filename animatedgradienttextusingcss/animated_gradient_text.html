@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Gradient text </title>
+</head>
+<body>
+    <h1>Code.Scientist</h1>
+</body>
+<style>
+    h1{
+        font-size: 5rem;
+        background: linear-gradient(to right, #fff 20%,#65c7f7 40%,#0052D4 60%, #fff 80%);
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
+        text-fill-color:transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate 2s linear infinite;
+
+    }
+    @keyframes animate {
+        to{
+            background-position: 200% center;
+        }
+    }
+</style>
+</html>

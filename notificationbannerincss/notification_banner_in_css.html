@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Banner</title>
+</head>
+<body>
+    <div class="notification">
+        <p>Welcome NanumCoder </p>
+        <span class="progress"></span>
+    </div>
+</body>
+<style>
+    body{
+        background-color: gray;
+    }
+    .notification{
+        position: relative;
+        display: inline-block;
+        max-width: 300px;
+        padding: 20px 15px;
+        border-radius: 4px;
+        background-color: #141619;
+        color: #f6f5f9;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+        transform: translateY(30px);
+        opacity: 0;
+        visibility: hidden;
+        animation: fade 4s linear forwards;
+
+    }
+    .progress{
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        height: 3px;
+        width: 0;
+        background-image: linear-gradient(to right, #529bdb, #3250bf);
+        animation: progress 3s .25s linear forwards;
+    }
+    @keyframes fade{
+        5%{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+        90%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        95%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+    }
+    @keyframes progress{
+        to{
+            width: calc(100% - 10px);
+        }
+    }
+</style>
+</html>

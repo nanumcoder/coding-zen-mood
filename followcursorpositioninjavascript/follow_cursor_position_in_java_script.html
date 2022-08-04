@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Cursor Position In JavaScript</title>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+<style>
+    .circle{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 2px solid #303346;
+        transition: transform .25s;
+    }
+    .circle.active{
+        transform: translate(-50%, -50%) scale(.5);
+    }
+
+</style>
+<script>
+    let circle= document.querySelector('.circle');
+    const moveCircle = (e) => {
+        circle.style.left = `${e.pageX}px`;
+        circle.style.top = `${e.pageY}px`;
+    }
+    const addPluse = () => {
+        circle.classList.toggle('active');
+    }
+    window.addEventListener('mousemove', moveCircle);
+    window.addEventListener('movedown', addPulse);
+    window.addEventListener('mouseup', addPluse);
+</script>
+</html>

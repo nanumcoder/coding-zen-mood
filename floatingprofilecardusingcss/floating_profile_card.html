@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Profile card</title>
+</head>
+<body>
+    <div class="profile-image">
+        <img src="./channels4_profile (2).jpg" alt="">
+    </div>
+</body>
+<style>
+    body{
+        background-color: gray;
+        padding: 30px 50px;
+    }
+    .profile-image img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        animation: float 4s linear infinite;
+    }
+    @keyframes float {
+        0%,
+        100%{
+            box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.6);
+        }
+        50%{
+            box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.2);
+            transform: translateY(-20px);
+        }
+    }
+</style>
+</html>

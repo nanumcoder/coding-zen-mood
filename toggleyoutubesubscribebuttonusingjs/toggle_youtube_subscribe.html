@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Youtube Subscribe</title>
+</head>
+<body>
+    <button id="subscribe" class="subscribe">Subscribe</button>
+</body>
+<style>
+    .subscribe{
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        content: 'subscribe';
+    }
+</style>
+<script>
+    let subscribeBtn = document.getElementById("subscribe");
+    let subscribe = false;
+
+    subscribeBtn.addEventListener('click',()=>{
+        if(sucscribe){
+            subscribeBtn.innerText="subscribed"
+            subscribeBtn.style = `background-color: gray;`
+            subscribe = false
+        }
+        else{
+            subscribeBtn.innerText = "subscribe"
+            subscribeBtn.style = `background-color: red;`
+            subscribe = true
+        }
+    })
+</script>
+</html>

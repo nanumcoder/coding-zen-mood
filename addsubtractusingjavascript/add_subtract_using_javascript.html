@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Subtract using JS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h1 id="counter">0</h1>
+        <button id="incr">+</button>
+        <button id="decr">-</button>
+    </div>
+</body>
+<style>
+    body{
+        background-color: gray;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 2px solid;
+        height: 12rem;
+        width: 12rem;
+        background: linear-gradient(45deg, #2193b0, #6dd5ed);
+        color: white;
+        position: relative;
+    }
+    #incr,
+    #decr{
+        border-radius: 50%;
+        font-size: 15px;
+        position: absolute;
+        bottom: 20px;
+        right: -14px;
+        height: 30px;
+        width: 30px;
+        background: white;
+        border: 0 5px 26px -8px black;
+        cursor: pointer;
+    }
+    #decr{
+        right: 175px;
+        /* bottom: -10px; */
+    }
+</style>
+<script>
+    const counter = document.getElementById("counter");
+    const incr = document.getElementById("incr");
+    const decr = document.getElementById("decr");
+
+    let count = 0;
+    incr.addEventListener("click",()=>{
+        count++;
+        counter.innerText=count;
+    });
+
+    decr.addEventListener("click",()=>{
+        count--;
+        counter.innerText=count;
+    })
+</script>
+</html>
