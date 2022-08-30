@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allery hover Animation</title>
+</head>
+<body>
+    <div class="gallery">
+        <img src="./download (1).jpg" alt="">
+        <img src="./download.jpg" alt="">
+        <img src="./logo1.jpg" alt="">
+        <img src="./download3.jpg" alt="">
+    </div>
+</body>
+<style>
+    .gallery{
+        width: 85vw;
+        height: 60vmin;
+        display: flex;
+        gap: 5px;
+    }
+    .gallery img{
+        height: 100%;
+        flex: 1;
+        object-fit: cover;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .gallery img:hover{
+        flex: 4;
+    }
+</style>
+</html>

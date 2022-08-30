@@ -1,0 +1,181 @@
+div .at-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+.at-item{
+    color: #3079ed;
+    animation-name: focus-in-contract;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes focus-in-contract{
+    0%{
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100%{
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+div .shutter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.shutter-item{
+    width: 100px;
+    height: 100px;
+    background-color: #ffe672;
+    animation-name: shutter-in-top;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: normal;
+    animation-fill-mode: none;
+}
+@keyframes shutter-in-top{
+    0%{
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+    100%{
+        transform: rotateX(odeg);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+div .flip-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+}
+.flip-item {
+    width: 100px;
+    height: 100px;
+    background-color: #ff7272;
+    animation-name: flip-diagonal-tr;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes flip-diagonal-tr{
+    0%{
+        transform: rotate3d(1, 1, 0,0deg);
+    }
+    100%{
+        transform: rotate3d(1, 1, 0, 180deg);
+    }
+}
+
+div.rotate-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.rotate-item{
+    width: 100px;
+    height: 100px;
+    background-color: #72cbff;
+    animation: rotate-center 1s ease 0s 1 normal none;
+
+}
+
+@keyframes rotate-center {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+div.scale-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.scale-item{
+    width: 100px;
+    height: 100px;
+    background-color: #72ff95;
+    animation: scale-up-center 1s ease 0s 1 normal none;
+}
+@keyframes scale-up-center{
+    0%{
+        transform: scale(.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+div.shadow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+}
+.shadow-item{
+    width: 100px;
+    height: 100px;
+    background-color: #fd3ecd;
+    animation: shadow-drop-center 1s ease 0s 1 normal none;
+}
+
+@keyframes shadow-drop-center{
+    0%{
+        box-shadow: 0 0 0 0 transparent;
+    }
+    100%{
+        box-shadow: 0 0 20px 0 rgb(0, 0, 0, .35);
+    }
+}
+
+div.swirl-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+}
+.swirl-item{
+    width: 100px;
+    height: 100px;
+    background-color: #d10606;
+    animation: swirl-in-br-clock 1s ease 0s 1 normal none;
+}
+@keyframes swirl-in-br-clock{
+    0%{
+        transform: rotate(-540deg) scale(0);
+        transform-origin: 100% 100%;
+        opacity: 1;
+    }
+}

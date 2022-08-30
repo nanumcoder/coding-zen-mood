@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Page</title>
+</head>
+
+<body>
+    <div class="splash">
+        <div class="splash_logo">
+            Youtube
+        </div>
+        <div class="splash_svg">
+            <svg width="100%" height="100%">
+                <rect width="100%" height="100%"></rect>
+            </svg>
+        </div>
+        <div class="splash_minimize">
+            <svg width="100%" height="100%">
+                <rect width="100%" height="100%" </svg>
+        </div>
+    </div>
+    <div class="text">
+        <p>NANUMCODER</p>
+        <P> This channel is contains Laravel tutorials and videos in tamil. Laravel tutorials in Tamil are very useful
+            and easy to learn for those interested in laravel frameworks in Tamil. I will do more laravel tutorial
+            videos in tamil.</P>
+            <button>More</button>
+    </div>
+</body>
+<style>
+    @mixin animation($animate...){
+        $max: length($animate);
+        $animations:'';
+        @for $i from 1 through $max {
+            $animation:#{$animation + nth(animate, $i)};
+            @if $i < $max {
+                $animations:#{$animations + ","};
+            }
+        }
+        -webkit-animation:$animations;
+        -moz-animation:$animations;
+        -o-animation:$animations;
+        animation:$animations;
+    }
+    @mixin keyframes($animationName){
+        @-webkit-keyframes #{$animationName}{
+            @content;
+        }
+        @-moz-keyframes #{$animationName}{
+            @content;
+        }
+        @-o-keyframes #{$animationName}{
+            @content
+        }
+        @keyframes #{$animationName}{
+            @content;
+        }
+    }
+    body{
+        background-color: #191919;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .text{
+        opacity: 0;
+        position: absolute;
+        z-index: 7;
+        text-align: left;
+        margin: -50px 0 0 -15px;
+        width: 300px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    p{
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        @include animation('type .3s steps(60, end) 3.7s');
+
+    }
+    p:nth-child(2){
+        @include animation('type2 .5s steps(60, end) 3.7s');
+    }
+    @include animation('on .6s ease-in-out 3.7s forwards');
+
+    buttom{
+        border: 0;
+        opacity: 0;
+        background: #191919;
+        color: #f5d300;
+        border: 1px solid #191919;
+        letter-spacing: 2px;
+        padding: .5rem 2.5rem;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include transition(color .5s, background-color .5s);
+        @include animation('on .6s ease-in-out 4s forwards');
+    }
+</style>
+</html>

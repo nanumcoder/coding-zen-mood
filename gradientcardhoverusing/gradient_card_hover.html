@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Gradient Card Hover Using CSS
+    </title>
+</head>
+
+<body>
+    <div class="card">
+        <h2>NANUM CODER</h2>
+        <p>This channel is contains Laravel tutorials and videos in tamil. Laravel tutorials in Tamil are very useful
+            and easy to learn for those interested in laravel frameworks in Tamil. I will do more laravel tutorial
+            videos in tamil. I will upload more PHP videos in tamil, AJax videos in Tamil. All tutorials videos in our
+            Tamil language. It is very use full for who are all interested in web development. You can find the
+            laraveltamil video of integrate themes in Laravel project and Ajax CURD laravel videos in tamil.</p>
+    </div>
+</body>
+<style>
+    .card{
+        height: 20rem;
+        width: 15rem;
+        border-radius: 10px;
+        background-color: rgb(133, 50, 50);
+        color: black;
+        padding: 0 10px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        cursor: pointer;
+        transition:  0.5s ease;
+    }
+    .card:hover{
+        color: white;
+    }
+    .card h2{
+        margin-bottom: 10px;
+
+    }
+    .card p {
+        font-size: 14px;
+
+    }
+    .card::before{
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: -25px;
+        height: 10rem;
+        width: 10rem;
+        background: linear-gradient(45deg, #2193b0, #6dd5ed);
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(1);
+        transition: 0.5s ease;
+    }
+    .card:hover::before{
+        transform: scale(4.5);
+    }
+</style>
+</html>

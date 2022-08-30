@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loading Animation</title>
+</head>
+<body>
+    <div class="loader">
+        <div>N</div>
+        <div>A</div>
+        <div>N</div>
+        <div>U</div>
+        <div>M</div>
+        <div>C</div>
+        <div>O</div>
+        <div>D</div>
+        <div>E</div>
+        <div>R</div>
+    </div>
+</body>
+<style>
+    body{
+        background-color: gray;
+    }
+    .loader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        margin: 50px auto;
+        width: 200px;
+    }
+    .loader div{
+        height: 20px;
+        width: 100%;
+        margin: 0 2px;
+        background: purple;
+        text-align: center;
+        text-transform: uppercase;
+        color: #220a1c;
+        font-family: 'Montserrat',sans-serif;
+        animation: .5s infinite jumpy;
+    }
+    .loader div:nth-child(even){
+        animation-delay: .1s;
+    }
+    @keyframes jumpy{
+        50%{
+            height: 50px;
+            background-color: violet;
+        }
+    }
+</style>
+</html>

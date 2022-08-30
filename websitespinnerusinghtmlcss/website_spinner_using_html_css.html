@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Spinner using HTML & CSS</title>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+<style>
+    body{
+        padding: 100px 100px;
+        background-color: grey;
+    }
+    .loader{
+        width: 20px;
+        height: 20px;
+        background-color: #ff7a00;
+        border-radius: 50%;
+        position: relative;
+    }
+    .loader::before,
+    .loader::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: #fff;
+        transform: rotate(0deg) translate(40px);
+        animation: spin 1s ease infinite;
+    }
+    .loader::after{
+        animation-delay: 650ms;
+    }
+    @keyframes spin {
+        to{
+            transform: rotate(360deg) translate(40px);
+        }
+    }
+</style>
+</html>

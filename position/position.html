@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+
+<body>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 text-dark" style="padding: 32px;">
+                    <div class="squareRounded squareRounded-topLeft position-absolute top-0 start-0 translate-middle">
+                    </div>
+                    <div
+                        class="squareRounded squareRounded-topRight position-absolute top-0 start-100 translate-middle">
+                    </div>
+                    <div
+                        class="squareRounded squareRounded-bottomLeft position-absolute top-100 start-0 translate-middle">
+                    </div>
+                    <div
+                        class="squareRounded squareRounded-bottomRight position-absolute top-100 start-100 translate-middle">
+                    </div>
+                    <img src="./image.jpg" alt="">
+                    <div class="card-body p-0">
+                        <h5 class="card-title">NanumCoder</h5>
+                        <p class="card-text"> This channel is contains Laravel tutorials and videos in tamil. Laravel
+                            tutorials in Tamil are very useful and easy to learn for those interested in laravel
+                            frameworks in Tamil.</p>
+                        <a href="" class="bth bth-primary">Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div banner text-center position-relative>
+                    <div class="square position-absolute top-0 start-0 translate-middle"></div>
+                    <div class="square position-absolute top-0 start-100 translate-middle"></div>
+                    <div class="square position-absolute top-100 start-0 translate-middle"></div>
+                    <div class="square position-absolute top-100 start-100 translate-middle"></div>
+                    <h1>NANUM <br> CODER</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #000;
+        color: #fff;
+    }
+    .squareRounded{
+        display: none;
+        width: 32px;
+        height: 32px;
+        &-topLeft{
+            border-top: 2px solid #62DB54;
+            border-left: 2px solid #62DB54;
+        }
+    }
+</style>
+</html>

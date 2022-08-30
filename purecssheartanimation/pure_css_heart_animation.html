@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heart" id="heart-button">
+            <span class="counter">1</span>
+            <i class="fa fa-heart"></i>
+        </div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        background-color: #eee;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heart{
+        background-color: #DDDDDD;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 19px;
+        cursor: pointer;
+        transition: all 0.5s;
+        position: relative;
+    }
+    .heart:hover{
+        color: #FB076D;
+        background-color: #fb076d40;
+    }
+    .heart .counter{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 10px;
+        z-index: -1;
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+        background-color: #FB076D;
+    }
+    .heart:hover .counter{
+        animation: anim 1s forwards;
+    }
+    @keyframes anim{
+        from{
+            top: 0px;
+        }
+        to{
+            top: -48px;
+        }
+    }
+</style>
+<script src="./heart.js"></script>
+</html>

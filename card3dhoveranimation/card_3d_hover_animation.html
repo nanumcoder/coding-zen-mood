@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3D Hover Animation</title>
+</head>
+<body>
+    <section class="cards">
+        <figure class="card">
+            <figcaption class="card-title">SUBSCRIBE</figcaption>
+        </figure>
+    </section>
+</body>
+<style>
+    body{
+        background-color: gray;
+        padding: 100px 100px;
+    }
+    .cards{
+        perspective: 500px;
+    }
+    .card{
+        width: 200px;
+        height: 250px;
+        background: url(./channels4_profile.jpg) center no-repeat;
+        background-size: cover;
+        border: 1px solid rgba(255, 255, 255, .25);
+        position: relative;
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform .5s;
+    }
+    .card:hover{
+        transform: translateZ(10px) rotate(20deg) rotateY(30deg);
+    }
+    .card-title{
+        color: rgb(52, 4, 4);
+        position: absolute;
+        top: 50%;
+        right: -85px;
+        transform: translateY(-50%);
+        transition: transform .5s;
+    }
+    .card:hover .card-title{
+        transform: translateZ(50px);
+    }
+</style>
+</html>

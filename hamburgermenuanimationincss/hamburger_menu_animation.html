@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Animation</title>
+</head>
+<body>
+    <label for="checkbox" class="hamburger">
+        <input type="checkbox" id="checkbox">
+        <span class="line line--top"></span>
+        <span class="line line--middle"></span>
+        <span class="line line--bottom"></span>
+    </label>
+</body>
+<style>
+    #checkbox{
+        display: none;
+    }
+    .hamburger{
+        position: relative;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    body{
+        background-color: gray;
+        padding: 100px 100px;
+    }
+    .line{
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: transform .25s ,opacity .35s;
+    }
+    .line--top{
+        transform: translateY(-7px);
+    }
+    .line--bottom{
+        transform: translateY(7px);
+    }
+    #checkbox:checked~.line--top{
+        transform: rotate(45deg);
+    }
+    #checkbox:checked~.line--middle{
+        transform: translateX(16px);
+        opacity: 0;
+    }
+    #checkbox:checked~.line--bottom{
+        transform: rotate(-45deg);
+    }
+</style>
+</html>

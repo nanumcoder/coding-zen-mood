@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Glowing Div
+    </title>
+</head>
+<body>
+    <div class="circle">
+        <p class="text">Hello</p>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #1a1a1a;
+    }
+    
+    p.text{
+        font-size: 2em;
+        color: #ffffff;
+        position: absolute;
+        text-align: center;
+        padding-top: 44px;
+        padding-left: 61px;
+        padding-right: 61px;
+    }
+    div.circle{
+        margin: 100px auto;
+        width: 200px;
+        height: 200px;
+    }
+    .circle{
+        -noz-border-radius:200px/200px;
+        -webkit-border-radius:200px 200px;
+        border-radius: 200px/200px;;
+        width: 200px;
+        height: 200px;
+        outline: none;
+        -webkit-animation-name: greenPulse;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+
+    }
+    .circle:hover{
+        box-shadow: 0 0 2px #91bd09;
+        -webkit-box-shadow:0 0 2px #91bd09;
+        -noz-box-shadow:0 0 2px #91bd09;
+        border: 1px solid #91bd09; 
+    }
+    @-webkit-keyframes greenPulse{
+        from{-webkit-box-shadow:0 0 1px #AFE30E;}
+        50%{
+            -webkit-box-shadow:0 0 18px #91bd09;
+        }
+        to{
+            -webkit-box-shadow:0 0 9px #8FB518;
+        }
+    }
+</style>
+</html>

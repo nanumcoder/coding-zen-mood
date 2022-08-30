@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Clock Spinner</title>
+</head>
+<body>
+    <div class="clock"></div>
+</body>
+<style>
+    body{
+        background-color: gray;
+        padding: 100px 100px;
+    }
+    .clock{
+        width: 120px;
+        height:120px;
+        border: 8px solid #fff;
+        border-radius: 50%;
+        position: relative;
+    }
+    .clock::before{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 45%;
+        background-color: #fff;
+        border-radius: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: top;
+        animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate{
+        to{
+            transform: translateX(-50%) rotate(360deg);
+        }
+    }
+</style>
+</html>

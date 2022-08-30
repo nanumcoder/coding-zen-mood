@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Using HTML & CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="rating-container">
+        <input type="radio" name="rating" id="star-1">
+        <label for="star-1"><i class="fa fa-star"></i></label>
+        <input type="radio" name="rating" id="star-2">
+        <label for="star-2"><i class="fa fa-star"></i></label>
+        <input type="radio" name="rating" id="star-3">
+        <label for="star-3"><i class="fa fa-star"></i></label>
+        <input type="radio" name="rating" id="star-4">
+        <label for="star-4"><i class="fa fa-star"></i></label>
+        <input type="radio" name="rating" id="star-4">
+        <label for="star-5"><i class="fa fa-star"></i></label>
+    </div>
+</body>
+<style>
+    body{
+        background-color: rgb(161, 138, 138);
+        padding: 100px 100px;
+    }
+    .rating-container{
+        transform: rotateY(180deg);
+    }
+    input{
+        display: none;
+    }
+    label{
+        display: inline-block;
+        color: #444;
+        font-size: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    label:not(:last-child){
+        margin-right: 5px;
+    }
+    input:checked~label,input:hover{
+        color: #ff7a00;
+
+    }
+    input:hover~label{
+        transform: scale(1.2) rotate(-30deg);
+    }
+</style>
+</html>
